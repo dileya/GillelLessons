@@ -45,3 +45,5 @@ case 'rub':
 alert(theSum * 0,4 + ' hrn');
 break;
 }
+
+//ghgjgjjg
