@@ -26,17 +26,10 @@ if (+number === randomNumber) {
 }*/
 
 //Запросить у пользователя значение, кратное которому будут выводиться числа - вывести их в консоль.
-var arr;
-for (var number = prompt("Enter a number"), quantity = prompt("Enter the quantity"), i = 1;
+for (var number = prompt("Enter a number"), quantity = prompt("Enter the quantity"), i = 0;
      i <= quantity;
      i++) {
     var result = [i * +number];
     if (!(i % +number)) continue;
     console.log(result);
 }
-/*
-var arr = ["Яблоко", "Апельсин", "Груша"];
-
-for (var i = 0; i < arr.length; i++) {
-  alert( arr[i] );
-}*/

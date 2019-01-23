@@ -35,8 +35,7 @@ for (var number = prompt("Enter a number"), i = 1; i % +number; i++) {
 }
 
 //Задание 4
-var arr;
-for (var number = prompt("Enter a number"), quantity = prompt("Enter the quantity"), i = 1;
+for (var number = prompt("Enter a number"), quantity = prompt("Enter the quantity"), i = 0;
      i <= quantity;
      i++) {
     var result = [i * +number];
