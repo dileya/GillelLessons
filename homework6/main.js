@@ -47,6 +47,10 @@ function random() {
     randomString += alphabet.charAt(Math.floor(Math.random() * (alphabet.length -1)));
     return randomString;
 }
+function size(min, max) {
+    var randomSize = (Math.round(Math.random() * (max - min) + min));
+    return randomSize;
+}
 var obj = {};
 for (var number = +prompt("Enter the number of results"),
          max = +prompt('Enter the max'),
@@ -54,7 +58,7 @@ for (var number = +prompt("Enter the number of results"),
          i < number;
          i++) {
     var newArr = random();
-    var stringSize = Math.round((max + min) / 2);
+    var stringSize = size(min, max);
     var lastArr = newArr.split('', stringSize);
     var result = lastArr.join('');
     if (!obj[stringSize]) {
@@ -63,9 +67,9 @@ for (var number = +prompt("Enter the number of results"),
     obj[stringSize].push(result);
     console.log(obj);
     console.log(result);
+    alert('1 word with ' + stringSize + ' characters');
     if (number === i) break;
 }
-alert(number + ' words with ' + stringSize + ' characters');
 console.log(obj);
 
 /*
