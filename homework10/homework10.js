@@ -1,4 +1,4 @@
-//Интерактивные часы вывеены на экран скриптом, написанным в index.html
+//Интерактивные часы выведены на экран скриптом, написанным в index.html
 
 function alarm(currentDate, startDateOne, startDateTwo, startDateThree) {
 
