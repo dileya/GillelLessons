@@ -1,4 +1,4 @@
-//Интерактивные часы выведены на экран скриптом, написанным в index.html
+/*//Интерактивные часы выведены на экран скриптом, написанным в index.html
 function Task(title, description, startDate, endDate) {
   this.title = title,
   this.description = description,
@@ -31,4 +31,15 @@ var taskThree = new Task('Задача №3', 'Полежать :)', new Date(20
   var result = setInterval(function() {
     alarm();
     }, 1000);
+*/
+
+String.prototype.circus = function () {
+  var map = Array.prototype.map;
+  return map.call(this,function(x, i) { 
+    return (!(i % 2)) ? x : x.toUpperCase()}
+    ).join('');
+}
+console.log('fghjknbhfgrgrg'.circus());
+
+
 
