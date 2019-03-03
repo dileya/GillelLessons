@@ -1,4 +1,4 @@
-/*//Интерактивные часы выведены на экран скриптом, написанным в index.html
+//Интерактивные часы выведены на экран скриптом, написанным в index.html
 function Task(title, description, startDate, endDate) {
   this.title = title,
   this.description = description,
@@ -10,7 +10,7 @@ Task.prototype = alarm;
 function alarm(currentDate) {
 
 var currentDate = new Date();
-var taskOne = new Task('Задача №1', 'Выучить английский',new Date(2019, 1, 3, 22, 36, 0),new Date(2019, 0, 31, 21, 00, 0));
+var taskOne = new Task('Задача №1', 'Выучить английский',new Date(2019, 2, 3, 24, 04, 0),new Date(2019, 0, 31, 21, 00, 0));
 var taskTwo = new Task('Задача №2', 'Выучить прототипы', new Date(2019, 1, 3, 22, 30, 0),new Date(2019, 0, 31, 21, 45, 0));
 var taskThree = new Task('Задача №3', 'Полежать :)', new Date(2019, 1, 3, 22, 31, 0), new Date(2019, 0, 31, 22, 30, 0));
 
@@ -31,8 +31,8 @@ var taskThree = new Task('Задача №3', 'Полежать :)', new Date(20
   var result = setInterval(function() {
     alarm();
     }, 1000);
-*/
 
+/*
 String.prototype.circus = function () {
   var map = Array.prototype.map;
   return map.call(this,function(x, i) { 
@@ -42,4 +42,4 @@ String.prototype.circus = function () {
 console.log('fghjknbhfgrgrg'.circus());
 
 
-
+*/

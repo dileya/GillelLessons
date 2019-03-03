@@ -1,13 +1,3 @@
-// var div = document.createElement('div');
-// div.className = "clock";
-// div.innerHTML = clock;
-// document.body.appendChild(div);
-// var timerId = setTimeout(function tick() {
-//   alert( "тик" );
-//   timerId = setTimeout(tick, 2000);
-// }, 2000);
-  
-
 function clock() {
   var date = new Date();
   var hours = date.getHours();
@@ -25,9 +15,9 @@ div.className = "clock";
 document.body.appendChild(div);
 setInterval(function(){
   div.innerHTML = clock();
+  alarm();
 }, 1000);
 
-/*
 function Task(title, description, startDate, endDate) {
   this.title = title,
   this.description = description,
@@ -36,30 +26,32 @@ function Task(title, description, startDate, endDate) {
 }
 Task.prototype = alarm;
 
-function alarm(currentDate) {
+var taskOne = new Task('Задача №1', 'Выучить английский',new Date(2019, 2, 4, 1, 15, 0),new Date(2019, 0, 31, 21, 00, 0));
+var taskTwo = new Task('Задача №2', 'Выучить прототипы', new Date(2019, 2, 4, 1, 16, 0),new Date(2019, 0, 31, 21, 45, 0));
+var taskThree = new Task('Задача №3', 'Полежать :)', new Date(2019, 2, 4, 1, 17, 0), new Date(2019, 0, 31, 22, 30, 0));
 
+function alarm () {
 var currentDate = new Date();
-var taskOne = new Task('Задача №1', 'Выучить английский',new Date(2019, 1, 3, 22, 36, 0),new Date(2019, 0, 31, 21, 00, 0));
-var taskTwo = new Task('Задача №2', 'Выучить прототипы', new Date(2019, 1, 3, 22, 30, 0),new Date(2019, 0, 31, 21, 45, 0));
-var taskThree = new Task('Задача №3', 'Полежать :)', new Date(2019, 1, 3, 22, 31, 0), new Date(2019, 0, 31, 22, 30, 0));
-
-
- if (Math.floor(currentDate.getTime() / 1000) === Math.floor(taskOne.startDate.getTime() / 1000)) {
-  var a = alert('TaskOne should be done!'); 
-  console.log(taskOne);
- }
- if (Math.floor(currentDate.getTime() / 1000) === Math.floor(taskTwo.startDate.getTime() / 1000)) {
-  var a = alert('TaskTwo should be done!'); 
-  console.log(taskTwo);
- }
- if (Math.floor(currentDate.getTime() / 1000) === Math.floor(taskThree.startDate.getTime() / 1000)) {
-  var a = alert('TaskThree should be done!'); 
-  console.log(taskThree);
- }
+if (Math.floor(currentDate.getTime() / 1000) === Math.floor(taskOne.startDate.getTime() / 1000)) {
+  var displayOne = document.createElement('p');
+  displayOne.className = 'taskOne';
+  document.body.appendChild(displayOne);
+  displayOne.textContent = JSON.stringify(taskOne);
 }
-  var result = setInterval(function() {
-    alarm();
-    }, 1000);
+
+if (Math.floor(currentDate.getTime() / 1000) === Math.floor(taskTwo.startDate.getTime() / 1000)) {
+  var displayTwo = document.createElement('p');
+  displayTwo.className = 'taskTwo';
+  document.body.appendChild(displayTwo);
+  displayTwo.innerHTML = JSON.stringify(taskTwo);
+}
+
+if (Math.floor(currentDate.getTime() / 1000) === Math.floor(taskThree.startDate.getTime() / 1000)) {
+  var displayThree = document.createElement('p');
+  displayThree.className = 'taskThree';
+  document.body.appendChild(displayThree);
+  displayThree.innerHTML = JSON.stringify(taskThree);
+}
+}
 
 
-*/
