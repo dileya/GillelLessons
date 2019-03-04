@@ -1,0 +1,39 @@
+.container {
+    display: block;
+    border: 1px solid blueviolet;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.clock {
+    font-size: 30px;
+    color: blueviolet;
+    text-align: center;
+}
+#now {
+    display: block;
+    border: 1px solid blueviolet;
+    text-align: center;
+    font-size: 20px;
+    width: 49%;
+    float: left;
+}
+#soon {
+    display: block;
+    border: 1px solid blueviolet;
+    text-align: center;
+    font-size: 20px;
+    width: 49%;
+    float: right;
+}
+.task {
+    border: 1px dashed violet;
+    text-align: left;
+    word-wrap: break-word;
+    font-style: italic;
+}
+#close {
+    display: block;
+    float: right;
+}
