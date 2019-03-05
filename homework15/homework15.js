@@ -35,29 +35,29 @@ var taskThree = new Task('Задача №3', 'Полежать :)', new Date(20
 var displayOne = document.createElement('p');
 displayOne.id = 'tOne';
 soon.appendChild(displayOne);
+displayOne.textContent = JSON.stringify(taskOne);
 var closerOne = document.createElement('span');
 closerOne.id = 'closeOne';
 closerOne.innerHTML = 'X';
 tOne.appendChild(closerOne);
-displayOne.textContent = JSON.stringify(taskOne);
 
 var displayTwo = document.createElement('p');
 displayTwo.id = 'tTwo';
 soon.appendChild(displayTwo);
+displayTwo.innerHTML = JSON.stringify(taskTwo);
 var closerTwo = document.createElement('span');
 closerTwo.id = 'closeTwo';
 closerTwo.innerHTML = 'X';
 tTwo.appendChild(closerTwo);
-displayTwo.innerHTML = JSON.stringify(taskTwo);
 
 var displayThree = document.createElement('p');
 displayThree.id = 'tThree';
 soon.appendChild(displayThree);
+displayThree.innerHTML = JSON.stringify(taskThree);
 var closerThree = document.createElement('span');
 closerThree.id = 'closeThree';
 closerThree.innerHTML = 'X';
 tThree.appendChild(closerThree);
-displayThree.innerHTML = JSON.stringify(taskThree);
 
 
 document.getElementById("closeOne").addEventListener("click", function () {
