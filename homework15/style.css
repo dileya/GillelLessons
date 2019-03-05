@@ -27,13 +27,19 @@
     width: 49%;
     float: right;
 }
-.task {
+#tOne, #tTwo, #tThree {
     border: 1px dashed violet;
     text-align: left;
     word-wrap: break-word;
     font-style: italic;
 }
-#close {
-    display: block;
-    float: right;
+#closeOne, #closeTwo, #closeThree {
+    font-size: 25px;
+    color: rgb(182, 22, 134);
+    font-weight: 700;
+    font-style: normal;
+    position: relative;
+    right: -20px;
+    top: -50px;
+    cursor: pointer;
 }

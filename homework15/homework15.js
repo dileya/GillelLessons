@@ -26,35 +26,65 @@ function Task(title, description, startDate, endDate) {
 }
 Task.prototype = alarm;
 
-var taskOne = new Task('Задача №1', 'Выучить английский',new Date(2019, 2, 4, 2, 51, 0),new Date(2019, 0, 31, 21, 00, 0));
-var taskTwo = new Task('Задача №2', 'Выучить прототипы', new Date(2019, 2, 4, 2, 42, 0),new Date(2019, 0, 31, 21, 45, 0));
-var taskThree = new Task('Задача №3', 'Полежать :)', new Date(2019, 2, 4, 2, 28, 0), new Date(2019, 0, 31, 22, 30, 0));
+var taskOne = new Task('Задача №1', 'Выучить английский',new Date(2019, 2, 5, 00, 21, 0),new Date(2019, 2, 6, 21, 00, 0));
+var taskTwo = new Task('Задача №2', 'Выучить прототипы', new Date(2019, 2, 5, 00, 22, 0),new Date(2019, 2, 6, 21, 45, 0));
+var taskThree = new Task('Задача №3', 'Полежать :)', new Date(2019, 2, 5, 00, 23, 0), new Date(2019, 2, 6, 22, 30, 0));
 
 // Добавить отображение тасок, которые еще не пришли в стадию выполнения. 
 // Добавить возможность удалить таски из панели "не выполненные" и "в процессе". (крестик для удаления)
+var displayOne = document.createElement('p');
+displayOne.id = 'tOne';
+soon.appendChild(displayOne);
+var closerOne = document.createElement('span');
+closerOne.id = 'closeOne';
+closerOne.innerHTML = 'X';
+tOne.appendChild(closerOne);
+displayOne.textContent = JSON.stringify(taskOne);
+
+var displayTwo = document.createElement('p');
+displayTwo.id = 'tTwo';
+soon.appendChild(displayTwo);
+var closerTwo = document.createElement('span');
+closerTwo.id = 'closeTwo';
+closerTwo.innerHTML = 'X';
+tTwo.appendChild(closerTwo);
+displayTwo.innerHTML = JSON.stringify(taskTwo);
+
+var displayThree = document.createElement('p');
+displayThree.id = 'tThree';
+soon.appendChild(displayThree);
+var closerThree = document.createElement('span');
+closerThree.id = 'closeThree';
+closerThree.innerHTML = 'X';
+tThree.appendChild(closerThree);
+displayThree.innerHTML = JSON.stringify(taskThree);
+
+
+document.getElementById("closeOne").addEventListener("click", function () {
+  document.getElementById("tOne").style.display = "none";
+});
+
+document.getElementById("closeTwo").addEventListener("click", function () {
+  document.getElementById("tTwo").style.display = "none";
+});
+
+document.getElementById("closeThree").addEventListener("click", function () {
+  document.getElementById("tTree").style.display = "none";
+});
 
 function alarm () {
 var currentDate = new Date();
+
 if (Math.floor(currentDate.getTime() / 1000) === Math.floor(taskOne.startDate.getTime() / 1000)) {
-  var displayOne = document.createElement('p');
-  displayOne.className = 'task';
   now.appendChild(displayOne);
-  displayOne.textContent = JSON.stringify(taskOne);
 }
-
 if (Math.floor(currentDate.getTime() / 1000) === Math.floor(taskTwo.startDate.getTime() / 1000)) {
-  var displayTwo = document.createElement('p');
-  displayTwo.className = 'task';
   now.appendChild(displayTwo);
-  displayTwo.innerHTML = JSON.stringify(taskTwo);
+}
+if (Math.floor(currentDate.getTime() / 1000) === Math.floor(taskThree.startDate.getTime() / 1000)) {
+  now.appendChild(displayThree);
+}
 }
 
-if (Math.floor(currentDate.getTime() / 1000) === Math.floor(taskThree.startDate.getTime() / 1000)) {
-  var displayThree = document.createElement('p');
-  displayThree.className = 'task';
-  now.appendChild(displayThree);
-  displayThree.innerHTML = JSON.stringify(taskThree);
-}
-}
 
 
