@@ -26,12 +26,10 @@ function Task(title, description, startDate, endDate) {
 }
 Task.prototype = alarm;
 
-var taskOne = new Task('Задача №1', 'Выучить английский',new Date(2019, 2, 5, 00, 21, 0),new Date(2019, 2, 6, 21, 00, 0));
-var taskTwo = new Task('Задача №2', 'Выучить прототипы', new Date(2019, 2, 5, 00, 22, 0),new Date(2019, 2, 6, 21, 45, 0));
-var taskThree = new Task('Задача №3', 'Полежать :)', new Date(2019, 2, 5, 00, 23, 0), new Date(2019, 2, 6, 22, 30, 0));
+var taskOne = new Task('Задача №1', 'Выучить английский',new Date(2019, 2, 9, 21, 41, 0),new Date(2019, 2, 6, 21, 00, 0));
+var taskTwo = new Task('Задача №2', 'Выучить прототипы', new Date(2019, 2, 9, 21, 45, 0),new Date(2019, 2, 6, 21, 45, 0));
+var taskThree = new Task('Задача №3', 'Полежать :)', new Date(2019, 2, 9, 21, 49, 0), new Date(2019, 2, 6, 22, 30, 0));
 
-// Добавить отображение тасок, которые еще не пришли в стадию выполнения. 
-// Добавить возможность удалить таски из панели "не выполненные" и "в процессе". (крестик для удаления)
 var displayOne = document.createElement('p');
 displayOne.id = 'tOne';
 soon.appendChild(displayOne);
@@ -69,7 +67,7 @@ document.getElementById("closeTwo").addEventListener("click", function () {
 });
 
 document.getElementById("closeThree").addEventListener("click", function () {
-  document.getElementById("tTree").style.display = "none";
+  document.getElementById("tThree").style.display = "none";
 });
 
 function alarm () {

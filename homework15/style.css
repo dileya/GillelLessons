@@ -32,6 +32,7 @@
     text-align: left;
     word-wrap: break-word;
     font-style: italic;
+    padding: 5px;
 }
 #closeOne, #closeTwo, #closeThree {
     font-size: 25px;
@@ -39,7 +40,7 @@
     font-weight: 700;
     font-style: normal;
     position: relative;
-    right: -20px;
     top: -50px;
     cursor: pointer;
+    float: right;
 }
