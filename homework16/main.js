@@ -18,9 +18,9 @@ class MyRequest {
 	}
 }
 
-class List {
+class List extends MyRequest {
 	constructor() {
-		this.xhr = new MyRequest();
+		super();
 		this.page = 1;
 		this.quantity = 0;
 		this.cache = [];
@@ -32,7 +32,7 @@ class List {
 	firstRequest() {
 		const url = `https://swapi.co/api/people/?page=${this.page}`;
 
-		this.xhr.getRequest(url, (data) => {
+		this.getRequest(url, (data) => {
 			this.quantity = Math.ceil(data.count / data.results.length);
 			this.cache.push(data.results);
 			this.renderPage(data.results);
@@ -72,7 +72,7 @@ class List {
 	getFromAPI() {
 		const url = `https://swapi.co/api/people/?page=${this.page}`;
 
-		this.xhr.getRequest(url, (data) => {
+		this.getRequest(url, (data) => {
 			this.cache.push(data.results);
 			this.renderPage(data.results);
 			this.checkButtons();
